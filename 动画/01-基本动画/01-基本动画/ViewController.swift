@@ -9,12 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func moveImage(_ sender: Any) {
+        switch (sender as! UIButton).tag {
+        case 100:
+            print("Up")
+        case 101:
+            print("Right")
+        case 102:
+            print("Down")
+        case 103:
+            print("Left")
+        default:
+            print("Nothing to do!")
+        }
+    }
+    
 }
 
