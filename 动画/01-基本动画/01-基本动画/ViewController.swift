@@ -1,6 +1,7 @@
 //
 //  ViewController.swift
 //  01-基本动画
+//  参考: https://www.jianshu.com/p/71f2fa270b9c
 //
 //  Created by LTH on 2018/10/15.
 //  Copyright © 2018 Tony. All rights reserved.
@@ -59,12 +60,13 @@ class ViewController: UIViewController {
                                 self.image.frame.origin.x -= moveMargin
                            },
                            completion: nil)
+        // Keyframe 关键帧动画
         case 104:
-            image.frame.size.width += moveMargin
-            image.frame.size.height += moveMargin
+            UIView.animateKeyframes(withDuration: 4, delay: 0, options: [], animations: {
+                
+            }, completion: nil)
         case 105:
-            image.frame.size.width -= moveMargin
-            image.frame.size.height -= moveMargin
+            break
         default:
             print("Nothing to do!")
         }
