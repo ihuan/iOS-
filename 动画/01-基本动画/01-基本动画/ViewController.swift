@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func moveImage(_ sender: Any) {
-        // 移动
         switch (sender as! UIButton).tag {
+        // 移动
         case 100:
             UIView.animate(withDuration: 2) {
                 self.image.frame.origin.y -= moveMargin
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
                     //self.image.alpha = 0
                 }
             }
+        // 循环
         case 101:
             // options：一个附加选项，UIViewAnimationOptions 可以指定多个
             //let opts = UIView.AnimationOptions.autoreverse 来回一次
@@ -39,24 +40,20 @@ class ViewController: UIViewController {
             }) { (_) in
                 self.image.center = self.view.center
             }
+        // 翻转 transform, 就是旋转平移缩放，可以叠加一起使用
         case 102:
-            self.image.frame.origin.y += moveMargin
+            UIView.animate(withDuration: 2) {
+                self.image.transform = CGAffineTransform.identity
+                    .translatedBy(x: -100, y: 0)
+                    .rotated(by: CGFloat(Double.pi/4))
+                    .scaledBy(x: 0.5, y: 0.5)
+            }
         case 103:
             image.frame.origin.x -= moveMargin
-        default:
-            print("Nothing to do!")
-        }
-    }
-    
-    /// 缩放
-    @IBAction func scaleImage(_ sender: Any) {
-        switch (sender as! UIButton).tag {
         case 104:
-            print("放大")
             image.frame.size.width += moveMargin
             image.frame.size.height += moveMargin
         case 105:
-            print("缩小")
             image.frame.size.width -= moveMargin
             image.frame.size.height -= moveMargin
         default:
@@ -65,7 +62,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func reset() {
+        // 移动还原
         image.center = view.center
+        // 翻转还原
+        image.transform = CGAffineTransform.identity
+        // 重复动画还原
+        image.layer.removeAllAnimations()
     }
     
 }
