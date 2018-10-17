@@ -31,7 +31,14 @@ class ViewController: UIViewController {
                 }
             }
         case 101:
-            image.frame.origin.x += moveMargin
+            // options：一个附加选项，UIViewAnimationOptions 可以指定多个
+            //let opts = UIView.AnimationOptions.autoreverse 来回一次
+            let opts: UIView.AnimationOptions = [UIView.AnimationOptions.autoreverse, UIView.AnimationOptions.repeat]
+            UIView.animate(withDuration: 2, delay: 0, options: opts, animations: {
+                self.image.frame.origin.x += moveMargin
+            }) { (_) in
+                self.image.center = self.view.center
+            }
         case 102:
             self.image.frame.origin.y += moveMargin
         case 103:
