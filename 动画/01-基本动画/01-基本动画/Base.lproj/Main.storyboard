@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1j-fn-ih9">
-                                <rect key="frame" x="335" y="567" width="31" height="30"/>
-                                <state key="normal" title="放大"/>
+                                <rect key="frame" x="320" y="567" width="46" height="30"/>
+                                <state key="normal" title="关键帧"/>
                                 <connections>
                                     <action selector="moveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwx-hW-4o9"/>
                                 </connections>
