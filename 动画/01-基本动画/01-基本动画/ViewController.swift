@@ -48,8 +48,17 @@ class ViewController: UIViewController {
                     .rotated(by: CGFloat(Double.pi/4))
                     .scaledBy(x: 0.5, y: 0.5)
             }
+        // Spring 弹簧
         case 103:
-            image.frame.origin.x -= moveMargin
+            UIView.animate(withDuration: 2,
+                           delay: 0, 
+                           usingSpringWithDamping: 0.3, // 振幅，越小，晃动的越缓和
+                           initialSpringVelocity: 1, // 初始速度
+                           options: [],
+                           animations: {
+                                self.image.frame.origin.x -= moveMargin
+                           },
+                           completion: nil)
         case 104:
             image.frame.size.width += moveMargin
             image.frame.size.height += moveMargin

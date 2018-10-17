@@ -18,49 +18,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1j-fn-ih9">
-                                <rect key="frame" x="344" y="567" width="31" height="30"/>
+                                <rect key="frame" x="335" y="567" width="31" height="30"/>
                                 <state key="normal" title="放大"/>
                                 <connections>
                                     <action selector="moveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwx-hW-4o9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wT-Fx-bio">
-                                <rect key="frame" x="344" y="602" width="31" height="30"/>
+                                <rect key="frame" x="335" y="602" width="31" height="30"/>
                                 <state key="normal" title="缩小"/>
                                 <connections>
                                     <action selector="moveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j9w-fv-tqe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SW-ZB-uzf">
-                                <rect key="frame" x="344" y="427" width="31" height="30"/>
+                                <rect key="frame" x="335" y="427" width="31" height="30"/>
                                 <state key="normal" title="移动"/>
                                 <connections>
                                     <action selector="moveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="21h-4B-Swf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To8-ZG-a19">
-                                <rect key="frame" x="344" y="462" width="31" height="30"/>
+                                <rect key="frame" x="335" y="462" width="31" height="30"/>
                                 <state key="normal" title="循环"/>
                                 <connections>
                                     <action selector="moveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p5O-By-1Y1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0T-fy-A3j">
-                                <rect key="frame" x="344" y="497" width="31" height="30"/>
+                                <rect key="frame" x="335" y="497" width="31" height="30"/>
                                 <state key="normal" title="翻转"/>
                                 <connections>
                                     <action selector="moveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6r-fU-FpB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gr0-yH-7HP">
-                                <rect key="frame" x="344" y="532" width="31" height="30"/>
+                                <rect key="frame" x="335" y="532" width="31" height="30"/>
                                 <state key="normal" title="弹簧"/>
                                 <connections>
                                     <action selector="moveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UBt-yb-JbJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cX-dr-TL6">
-                                <rect key="frame" x="344" y="637" width="31" height="30"/>
+                                <rect key="frame" x="335" y="637" width="31" height="30"/>
                                 <state key="normal" title="还原">
                                     <color key="titleColor" red="1" green="0.27595319109999999" blue="0.22534362150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -72,19 +72,19 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9cX-dr-TL6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2oq-ol-slQ"/>
-                            <constraint firstItem="9cX-dr-TL6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="77C-Va-QqY"/>
-                            <constraint firstItem="5SW-ZB-uzf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Aux-ld-469"/>
-                            <constraint firstItem="To8-ZG-a19" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FV1-EQ-9IS"/>
-                            <constraint firstItem="I0T-fy-A3j" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="I6g-kj-uZs"/>
+                            <constraint firstItem="9cX-dr-TL6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-9" id="77C-Va-QqY"/>
+                            <constraint firstItem="5SW-ZB-uzf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-9" id="Aux-ld-469"/>
+                            <constraint firstItem="To8-ZG-a19" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-9" id="FV1-EQ-9IS"/>
+                            <constraint firstItem="I0T-fy-A3j" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-9" id="I6g-kj-uZs"/>
                             <constraint firstItem="9cX-dr-TL6" firstAttribute="top" secondItem="2wT-Fx-bio" secondAttribute="bottom" constant="5" id="KA8-uW-Sa9"/>
                             <constraint firstItem="P1j-fn-ih9" firstAttribute="top" secondItem="gr0-yH-7HP" secondAttribute="bottom" constant="5" id="WDN-sA-Qbl"/>
-                            <constraint firstItem="P1j-fn-ih9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wja-XP-Khf"/>
-                            <constraint firstItem="gr0-yH-7HP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n24-qd-OXn"/>
+                            <constraint firstItem="P1j-fn-ih9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-9" id="Wja-XP-Khf"/>
+                            <constraint firstItem="gr0-yH-7HP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-9" id="n24-qd-OXn"/>
                             <constraint firstItem="2wT-Fx-bio" firstAttribute="top" secondItem="P1j-fn-ih9" secondAttribute="bottom" constant="5" id="nt2-xk-pFF"/>
                             <constraint firstItem="To8-ZG-a19" firstAttribute="top" secondItem="5SW-ZB-uzf" secondAttribute="bottom" constant="5" id="oD4-8x-4ks"/>
                             <constraint firstItem="gr0-yH-7HP" firstAttribute="top" secondItem="I0T-fy-A3j" secondAttribute="bottom" constant="5" id="vUr-qj-eOV"/>
                             <constraint firstItem="I0T-fy-A3j" firstAttribute="top" secondItem="To8-ZG-a19" secondAttribute="bottom" constant="5" id="yFb-gA-hIc"/>
-                            <constraint firstItem="2wT-Fx-bio" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zUl-Mv-Zqb"/>
+                            <constraint firstItem="2wT-Fx-bio" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-9" id="zUl-Mv-Zqb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
