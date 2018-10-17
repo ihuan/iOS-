@@ -18,14 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="If6-mb-KNz">
-                                <rect key="frame" x="95" y="262" width="185" height="143"/>
+                                <rect key="frame" x="95" y="474" width="185" height="143"/>
                                 <subviews>
                                     <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To8-ZG-a19">
                                         <rect key="frame" x="135" y="56.5" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="IJr-hK-aEG"/>
-                                            <constraint firstAttribute="width" constant="30" id="adC-b9-J30"/>
-                                        </constraints>
                                         <state key="normal" title="右"/>
                                         <connections>
                                             <action selector="moveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p5O-By-1Y1"/>
@@ -33,32 +29,20 @@
                                     </button>
                                     <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0T-fy-A3j">
                                         <rect key="frame" x="77.5" y="93" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="Vom-4W-TfX"/>
-                                            <constraint firstAttribute="height" constant="30" id="up7-Qd-252"/>
-                                        </constraints>
                                         <state key="normal" title="下"/>
                                         <connections>
                                             <action selector="moveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6r-fU-FpB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SW-ZB-uzf">
-                                        <rect key="frame" x="77.5" y="20" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="PsZ-b2-Awc"/>
-                                            <constraint firstAttribute="width" constant="30" id="YeL-8O-hT1"/>
-                                        </constraints>
-                                        <state key="normal" title="上"/>
+                                        <rect key="frame" x="77" y="20" width="31" height="30"/>
+                                        <state key="normal" title="移动"/>
                                         <connections>
                                             <action selector="moveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="21h-4B-Swf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gr0-yH-7HP">
                                         <rect key="frame" x="20" y="56.5" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="JHk-Pb-vu0"/>
-                                            <constraint firstAttribute="width" constant="30" id="KAv-hs-uZ9"/>
-                                        </constraints>
                                         <state key="normal" title="左"/>
                                         <connections>
                                             <action selector="moveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UBt-yb-JbJ"/>
@@ -80,17 +64,26 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1j-fn-ih9">
-                                <rect key="frame" x="95" y="413" width="31" height="30"/>
+                                <rect key="frame" x="95" y="625" width="31" height="30"/>
                                 <state key="normal" title="放大"/>
                                 <connections>
                                     <action selector="scaleImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9PD-wh-g1i"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wT-Fx-bio">
-                                <rect key="frame" x="249" y="413" width="31" height="30"/>
+                                <rect key="frame" x="249" y="625" width="31" height="30"/>
                                 <state key="normal" title="缩小"/>
                                 <connections>
                                     <action selector="scaleImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qHS-aU-vPi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cX-dr-TL6">
+                                <rect key="frame" x="172" y="625" width="31" height="30"/>
+                                <state key="normal" title="还原">
+                                    <color key="titleColor" red="1" green="0.27595319109999999" blue="0.22534362150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset" destination="BYZ-38-t0r" eventType="touchUpInside" id="3qD-Mv-rqI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,8 +91,10 @@
                         <constraints>
                             <constraint firstItem="2wT-Fx-bio" firstAttribute="top" secondItem="If6-mb-KNz" secondAttribute="bottom" constant="8" id="4Hy-ec-CVQ"/>
                             <constraint firstItem="If6-mb-KNz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="93K-1h-tjr"/>
+                            <constraint firstItem="9cX-dr-TL6" firstAttribute="top" secondItem="If6-mb-KNz" secondAttribute="bottom" constant="8" id="Avc-yB-QQy"/>
+                            <constraint firstItem="9cX-dr-TL6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ChB-Ad-3SK"/>
                             <constraint firstItem="2wT-Fx-bio" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P1j-fn-ih9" secondAttribute="trailing" constant="8" symbolic="YES" id="aDt-YE-DIc"/>
-                            <constraint firstItem="If6-mb-KNz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fH9-NE-akl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="If6-mb-KNz" secondAttribute="bottom" constant="50" id="cgr-Cu-3uW"/>
                             <constraint firstItem="P1j-fn-ih9" firstAttribute="top" secondItem="If6-mb-KNz" secondAttribute="bottom" constant="8" id="hdi-zK-ILg"/>
                             <constraint firstItem="P1j-fn-ih9" firstAttribute="leading" secondItem="If6-mb-KNz" secondAttribute="leading" id="v5T-Nm-a6M"/>
                             <constraint firstItem="2wT-Fx-bio" firstAttribute="trailing" secondItem="If6-mb-KNz" secondAttribute="trailing" id="wMc-yE-3eA"/>
@@ -109,6 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>

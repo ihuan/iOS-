@@ -8,7 +8,7 @@
 
 import UIKit
 
-let moveMargin: CGFloat = 20
+let moveMargin: CGFloat = 100
 
 class ViewController: UIViewController {
     
@@ -19,20 +19,22 @@ class ViewController: UIViewController {
         configUI()
     }
     
-    /// 移动图片
     @IBAction func moveImage(_ sender: Any) {
+        // 移动
         switch (sender as! UIButton).tag {
         case 100:
-            print("Up")
-            image.frame.origin.y -= moveMargin
+            UIView.animate(withDuration: 2) {
+                self.image.frame.origin.y -= moveMargin
+                // 如果想让属性不执行动画可以
+                UIView.performWithoutAnimation {
+                    //self.image.alpha = 0
+                }
+            }
         case 101:
-            print("Right")
             image.frame.origin.x += moveMargin
         case 102:
-            print("Down")
-            image.frame.origin.y += moveMargin
+            self.image.frame.origin.y += moveMargin
         case 103:
-            print("Left")
             image.frame.origin.x -= moveMargin
         default:
             print("Nothing to do!")
@@ -55,13 +57,15 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func reset() {
+        image.center = view.center
+    }
+    
 }
 
 private extension ViewController {
     func configUI() {
-       
         image.center = view.center
-        image.frame.origin.y = 20
         view.addSubview(image)
     }
 }
