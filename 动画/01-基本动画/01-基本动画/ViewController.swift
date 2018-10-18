@@ -36,6 +36,10 @@ class ViewController: UIViewController {
     }()
     
     private lazy var imageAnimView: UIImageView = UIImageView()
+    /// 模拟声音控件
+    private lazy var imageAnimView1: UIImageView = UIImageView()
+    /// 默认录音控件
+    private lazy var imageAnimView2: UIImageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -171,9 +175,24 @@ class ViewController: UIViewController {
         view.addSubview(imageAnimView)
     }
     
+    /*
+     // 本身提供了图片的动画播放
+     let iv = UIImage.animatedImage(with
+     // 动画名字+“0”，直到1024
+     let iv = UIImage.animatedImageNamed(name
+     */
+    @IBAction func imageAnimation1(_ sender: Any) {
+        let imageAnim1 = UIImage.animatedImageNamed("voice", duration: 2)
+        imageAnimView1.frame = CGRect(x: 20, y: 120, width: 50, height: 50)
+        imageAnimView1.image = imageAnim1
+        //imageAnimView1.sizeToFit()
+        view.addSubview(imageAnimView1)
+    }
+    
+    @IBAction func imageAnimation2(_ sender: Any) {
+    
+    }
 }
-
-
 
 private extension ViewController {
     func configUI() {
