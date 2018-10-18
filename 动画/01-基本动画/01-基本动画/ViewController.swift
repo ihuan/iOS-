@@ -177,20 +177,42 @@ class ViewController: UIViewController {
     
     /*
      // 本身提供了图片的动画播放
-     let iv = UIImage.animatedImage(with
+     方法 一:
      // 动画名字+“0”，直到1024
      let iv = UIImage.animatedImageNamed(name
      */
     @IBAction func imageAnimation1(_ sender: Any) {
         let imageAnim1 = UIImage.animatedImageNamed("voice", duration: 2)
-        imageAnimView1.frame = CGRect(x: 20, y: 120, width: 50, height: 50)
+        imageAnimView1.frame = CGRect(x: 20, y: 140, width: 50, height: 50)
         imageAnimView1.image = imageAnim1
         //imageAnimView1.sizeToFit()
         view.addSubview(imageAnimView1)
     }
     
+    /*
+     // 本身提供了图片的动画播放
+     方法 二：
+     let iv = UIImage.animatedImage(with
+     */
     @IBAction func imageAnimation2(_ sender: Any) {
-    
+        var arr = [UIImage]()
+        let w : CGFloat = 18
+        for i in 0 ..< 6 {
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: w, height: w), false, 0)
+            let context = UIGraphicsGetCurrentContext()!
+            context.setFillColor(UIColor.red.cgColor)
+            let ii = CGFloat(i)
+            let rect = CGRect(x: ii, y:ii, width: w-ii*2, height: w-ii*2)
+            context.addEllipse(in: rect)
+            context.fillPath()
+            let im = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            arr.append(im)
+        }
+        let im = UIImage.animatedImage(with: arr, duration: 0.5)
+        imageAnimView2.frame = CGRect(x: 90, y: 140, width: 50, height: 50)
+        self.imageAnimView2.image = im
+        view.addSubview(imageAnimView2)
     }
 }
 
