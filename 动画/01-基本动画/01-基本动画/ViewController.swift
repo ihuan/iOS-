@@ -62,8 +62,39 @@ class ViewController: UIViewController {
                            completion: nil)
         // Keyframe 关键帧动画
         case 104:
+            var p = self.image.center
+            let dur = 0.25
+            var start = 0.0
+            let dx: CGFloat = -100
+            let dy: CGFloat = 50
+            var dir: CGFloat = 1
             UIView.animateKeyframes(withDuration: 4, delay: 0, options: [], animations: {
-                
+                UIView.addKeyframe(withRelativeStartTime: start , relativeDuration: dur , animations: {
+                    p.x += dx*dir
+                    p.y += dy
+                    self.image.center = p
+                })
+                start += dur
+                dir *= -1
+                UIView.addKeyframe(withRelativeStartTime: start , relativeDuration: dur , animations: {
+                    p.x += dx*dir
+                    p.y += dy
+                    self.image.center = p
+                })
+                start += dur
+                dir *= -1
+                UIView.addKeyframe(withRelativeStartTime: start , relativeDuration: dur , animations: {
+                    p.x += dx*dir
+                    p.y += dy
+                    self.image.center = p
+                })
+                start += dur
+                dir *= -1
+                UIView.addKeyframe(withRelativeStartTime: start , relativeDuration: dur , animations: {
+                    p.x += dx*dir
+                    p.y += dy
+                    self.image.center = p
+                })
             }, completion: nil)
         case 105:
             break
