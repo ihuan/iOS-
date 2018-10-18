@@ -76,15 +76,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8F0-gy-Onh">
-                                <rect key="frame" x="9" y="597" width="94" height="30"/>
-                                <state key="normal" title="UIImage动画1"/>
+                                <rect key="frame" x="9" y="597" width="62" height="30"/>
+                                <state key="normal" title="声音控件"/>
                                 <connections>
                                     <action selector="imageAnimation1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THz-wK-klb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pe9-lq-e7c">
-                                <rect key="frame" x="9" y="562" width="96" height="30"/>
-                                <state key="normal" title="UIImage动画2"/>
+                                <rect key="frame" x="9" y="562" width="62" height="30"/>
+                                <state key="normal" title="录音控件"/>
                                 <connections>
                                     <action selector="imageAnimation2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jdy-pW-oXm"/>
                                 </connections>
