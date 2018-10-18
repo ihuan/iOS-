@@ -26,7 +26,7 @@
                             </button>
                             <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wT-Fx-bio">
                                 <rect key="frame" x="335" y="602" width="31" height="30"/>
-                                <state key="normal" title="缩小"/>
+                                <state key="normal" title="过渡"/>
                                 <connections>
                                     <action selector="moveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j9w-fv-tqe"/>
                                 </connections>
@@ -68,11 +68,20 @@
                                     <action selector="reset" destination="BYZ-38-t0r" eventType="touchUpInside" id="U0U-c5-TMl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfu-up-N1H">
+                                <rect key="frame" x="9" y="632" width="120" height="30"/>
+                                <state key="normal" title="UIImageView动画"/>
+                                <connections>
+                                    <action selector="imageViewAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rsx-Hs-7KU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9cX-dr-TL6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2oq-ol-slQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yfu-up-N1H" secondAttribute="bottom" constant="5" id="30z-EN-fMe"/>
                             <constraint firstItem="9cX-dr-TL6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-9" id="77C-Va-QqY"/>
+                            <constraint firstItem="Yfu-up-N1H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="AVk-nS-VwB"/>
                             <constraint firstItem="5SW-ZB-uzf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-9" id="Aux-ld-469"/>
                             <constraint firstItem="To8-ZG-a19" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-9" id="FV1-EQ-9IS"/>
                             <constraint firstItem="I0T-fy-A3j" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-9" id="I6g-kj-uZs"/>
@@ -91,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="56.799999999999997" y="27.436281859070466"/>
+            <point key="canvasLocation" x="-151" y="12"/>
         </scene>
     </scenes>
 </document>

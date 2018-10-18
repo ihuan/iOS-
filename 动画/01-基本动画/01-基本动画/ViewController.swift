@@ -15,6 +15,28 @@ class ViewController: UIViewController {
     
     private lazy var image = UIImageView(image: UIImage(named: "logo"))
     
+    private lazy var myView1: MyView1 = {
+        let myView1 = MyView1()
+        myView1.backgroundColor = UIColor.lightGray //super.view.backgroundColor
+        myView1.frame = CGRect(x: 20, y: 20, width: 50, height: 50)
+        myView1.center.y = self.view.center.y
+        self.view.addSubview(myView1)
+        return myView1
+    }()
+    
+    private lazy var lable1: UILabel = {
+        let lable = UILabel()
+        lable.frame = CGRect(x: 90, y: 20, width: 150, height: 150)
+        lable.text = "Hello"
+        lable.textColor = UIColor.white
+        lable.backgroundColor = UIColor.black
+        lable.sizeToFit()
+        self.view.addSubview(lable)
+        return lable
+    }()
+    
+    private lazy var imageAnimView: UIImageView = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -60,7 +82,7 @@ class ViewController: UIViewController {
                                 self.image.frame.origin.x -= moveMargin
                            },
                            completion: nil)
-        // Keyframe 关键帧动画
+        // Keyframe 关键帧动画 - 可以把动画分成一个一个小的阶段
         case 104:
             var p = self.image.center
             let dur = 0.25
@@ -96,8 +118,31 @@ class ViewController: UIViewController {
                     self.image.center = p
                 })
             }, completion: nil)
+        // Transitions 过渡
         case 105:
-            break
+            // 1. View的Transitions
+            
+            UIView.transition(with: self.image, duration: 2, options: [.transitionFlipFromLeft], animations: {
+                if self.image.image == #imageLiteral(resourceName: "logo") {
+                    self.image.image = #imageLiteral(resourceName: "gold")
+                } else {
+                    self.image.image = #imageLiteral(resourceName: "logo")
+                }
+            }, completion: nil)
+            
+            // 2. 自定义view的 Transitions
+            UIView.transition(with: self.myView1, duration: 2, options: .transitionFlipFromLeft, animations: {
+                self.myView1.setNeedsDisplay()
+            }, completion: nil)
+            
+            // 3. 过渡动画3
+            let lab2 = UILabel(frame: self.lable1.frame)
+            lab2.text = self.lable1.text == "Hello" ? "World" : "Hello"
+            lab2.textColor = UIColor.white
+            lab2.sizeToFit()
+            UIView.transition(from: self.lable1 , to: lab2 , duration: 0.8 , options: .transitionFlipFromLeft , completion: { _ in
+                self.lable1 = lab2
+            })
         default:
             print("Nothing to do!")
         }
@@ -112,7 +157,23 @@ class ViewController: UIViewController {
         image.layer.removeAllAnimations()
     }
     
+    // 图片帧的交换， 如果更快就是一个Tom猫了
+    @IBAction func imageViewAnimation(_ sender: Any) {
+        let goldImage = #imageLiteral(resourceName: "gold")
+        let rImage = #imageLiteral(resourceName: "logo")
+        imageAnimView.frame = CGRect(x: 20, y: 90, width: 50, height: 50)
+        imageAnimView.contentMode = .scaleToFill
+        let imgArry = [goldImage, rImage]
+        imageAnimView.animationImages = imgArry
+        imageAnimView.animationDuration = 2
+        imageAnimView.animationRepeatCount = 3
+        imageAnimView.startAnimating()
+        view.addSubview(imageAnimView)
+    }
+    
 }
+
+
 
 private extension ViewController {
     func configUI() {
