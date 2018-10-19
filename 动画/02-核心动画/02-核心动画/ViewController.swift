@@ -235,7 +235,9 @@ private extension ViewController {
     
     func transitionAni() {
         let anim = CATransition()
-        anim.type = .reveal
+//        anim.type = .reveal
+        // 私有转场动画: rippleEffect cube  suckEffect
+        anim.type = .init(rawValue: "pageCurl")
         anim.subtype = CATransitionSubtype.fromLeft
         anim.duration = 1.5
         redLable.backgroundColor = UIColor.yellow
