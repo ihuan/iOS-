@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startAnimation(_ sender: Any) {
+        // 基本
         //position()
         //positonX()
         //rotation()
@@ -31,8 +32,12 @@ class ViewController: UIViewController {
         //sizeW()
         //opacity()
         
+        // 关键帧
         //valueKeyframeAni()
-        pathKeyframeAni()
+        //pathKeyframeAni()
+        
+        // 转场
+        transitionAni()
     }
 }
 
@@ -225,8 +230,19 @@ private extension ViewController {
     
 }
 
-// MARK: - 转场动画
+// MARK: - 转场动画 transitionAni
 private extension ViewController {
+    
+    func transitionAni() {
+        let anim = CATransition()
+        anim.type = .reveal
+        anim.subtype = CATransitionSubtype.fromLeft
+        anim.duration = 1.5
+        redLable.backgroundColor = UIColor.yellow
+        redLable.textColor = UIColor.black
+        redLable.text = "转场"
+        redLable.layer.add(anim, forKey: "transitionAni")
+    }
     
 }
 
