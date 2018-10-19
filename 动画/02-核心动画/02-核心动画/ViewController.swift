@@ -29,10 +29,15 @@ class ViewController: UIViewController {
         //bounds() // 这里有问题
         //size() // 这里有问题
         //sizeW()
-        opacity()
+        //opacity()
+        
+        //valueKeyframeAni()
+        pathKeyframeAni()
     }
 }
 
+
+// MARK: - 基本动画
 private extension ViewController {
     
     // MARK: - position 位置
@@ -183,7 +188,49 @@ private extension ViewController {
      shadowRadius 圆角
      ani.toValue = (id)[UIColor colorWithRed:0.0 green:0.502 blue:1.0 alpha:1.0].CGColor;
      
-     6.
-     
+     6. others
      */
+}
+
+// MARK: - 关键帧
+private extension ViewController {
+    
+    // 正方形运行
+    func valueKeyframeAni() {
+        let anim = CAKeyframeAnimation(keyPath: "position")
+        anim.duration = 4.0
+        anim.isRemovedOnCompletion = false
+        anim.fillMode = .forwards
+        anim.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        let value1 = NSValue.init(cgPoint: CGPoint(x: 150, y: 200))
+        let value2 = NSValue.init(cgPoint: CGPoint(x: 250, y: 200))
+        let value3 = NSValue.init(cgPoint: CGPoint(x: 250, y: 300))
+        let value4 = NSValue.init(cgPoint: CGPoint(x: 150, y: 300))
+        let value5 = NSValue.init(cgPoint: CGPoint(x: 150, y: 200))
+        anim.values = [value1, value2, value3, value4, value5]
+        redLable.layer.add(anim, forKey: "PositionKeyFrameValueAni")
+    }
+    
+    // 圆圈运行
+    func pathKeyframeAni() {
+        let anim = CAKeyframeAnimation(keyPath: "position")
+        let path = CGMutablePath.init()
+        path.addEllipse(in: CGRect(x: 130, y: 200, width: 100, height: 100))
+        anim.path = path
+        anim.duration = 4.0
+        anim.isRemovedOnCompletion = false
+        anim.fillMode = .forwards
+        redLable.layer.add(anim, forKey: "PostionKeyframePathAni")
+    }
+    
+}
+
+// MARK: - 转场动画
+private extension ViewController {
+    
+}
+
+// MARK: - 事物
+private extension ViewController {
+    
 }
