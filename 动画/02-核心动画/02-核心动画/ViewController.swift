@@ -157,4 +157,33 @@ private extension ViewController {
         anim.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         redLable.layer.add(anim, forKey: "opacityAni")
     }
+    
+    /*
+     其他相关
+     1. 背景色
+     backgroundColor
+     ani.toValue = (id)[UIColor colorWithRed:0.399 green:0.4804 blue:0.9887 alpha:1.0].CGColor;
+     
+     2. 圆角
+     cornerRadius
+     ani.toValue = [NSNumber numberWithFloat:self.centerShow.bounds.size.height / 2];
+     
+     3. 边框
+     borderWidth
+     ani.toValue = [NSNumber numberWithFloat:5.0];
+     
+     4. 内容 eg：替换一张图片
+     contents
+     ani.toValue = (id)[UIImage imageNamed:@"Raffle"].CGImage;
+     
+     5. 阴影
+     shadowColor
+     shadowOffset 偏移
+     shadowOpacity 透明
+     shadowRadius 圆角
+     ani.toValue = (id)[UIColor colorWithRed:0.0 green:0.502 blue:1.0 alpha:1.0].CGColor;
+     
+     6.
+     
+     */
 }
