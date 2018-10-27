@@ -259,7 +259,7 @@ private extension ViewController {
      可以设置更多影响弹簧动画效果的属性，
      可以实现更复杂的弹簧动画效果，
      且可以和其他动画组合。
-     */ 
+     */
     func springAni() {
         let anim = CASpringAnimation(keyPath: "bounds")
         // 质量越大，弹簧拉伸和压缩的幅度越大
@@ -269,7 +269,7 @@ private extension ViewController {
         // 阻尼系数，阻止弹簧伸缩的系数，阻尼系数越大，停止越快
         anim.damping = 100.0
         // 初始速率，动画视图的初始速度大小;速率为正数时，速度方向与运动方向一致，速率为负数时，速度方向与运动方向相反
-        anim.initialVelocity = 5.0ç
+        anim.initialVelocity = 5.0
         anim.fromValue = NSValue.init(cgRect: purpleLable.bounds)
         anim.toValue = NSValue.init(cgRect: redLable.bounds)
         anim.isRemovedOnCompletion = false
