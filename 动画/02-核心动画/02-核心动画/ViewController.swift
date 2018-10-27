@@ -281,6 +281,21 @@ private extension ViewController {
 }
 
 // MARK: - 事务
+// 事务的作用：保证一个或多个layer的一个或多个属性变化同时进行
+// 负责协调多个动画原子更新显示操作
+/*
+ 隐式 - 没有明显调用事务的方法，由系统自动生成事务。
+ 显式 - 明显调用事务的方法
+ */
 private extension ViewController {
+    
+    func testTransaction() {
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(2.0)
+        CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: .easeInEaseOut))
+        // ... 动画
+        CATransaction.commit()
+        // 注意：只有非root layer才有隐式动画
+    }
     
 }
