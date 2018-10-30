@@ -6,24 +6,27 @@
 //  Copyright © 2018 Tony. All rights reserved.
 //
 
+/*
+ refer to : https://www.jianshu.com/p/491b50cb19cb
+ */
 import UIKit
 
 class CGView: UIView {
 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        self .drawRectCorner()
+        self.draw1()
     }
     
-    func drawRectCorner() {
+    func draw1() {
         // 1、 获取上下文对象
         let context = UIGraphicsGetCurrentContext()
         
         // 2、 创建路径对象
         let path = CGMutablePath()
         path.move(to: CGPoint(x: 10, y: 30))
-        path.move(to: CGPoint(x: 10, y: 100))
-        path.move(to: CGPoint(x: 150, y: 100))
+        path.addLine(to: CGPoint(x: 10, y: 100))
+        path.addLine(to: CGPoint(x: 150, y: 100))
         
         // 3、 添加路径到图形上下文
         context!.addPath(path)

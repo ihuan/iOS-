@@ -14,7 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let cgView = CGView.init(frame: CGRect(x: 0, y: 44, width: 160, height: 110))
-        cgView.backgroundColor = UIColor.white
+        cgView.backgroundColor = UIColor.purple
+        cgView.center = view.center
         view.addSubview(cgView)
     }
 
