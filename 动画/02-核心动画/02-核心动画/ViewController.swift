@@ -37,7 +37,10 @@ class ViewController: UIViewController {
         //pathKeyframeAni()
         
         // 转场
-        transitionAni()
+        //transitionAni()
+        
+        // 弹簧
+        springAni()
     }
 }
 
@@ -248,7 +251,51 @@ private extension ViewController {
     
 }
 
-// MARK: - 事物
+// MARK: - 弹簧动画
 private extension ViewController {
+    
+    /*
+     CASpringAnimation
+     可以设置更多影响弹簧动画效果的属性，
+     可以实现更复杂的弹簧动画效果，
+     且可以和其他动画组合。
+     */
+    func springAni() {
+        let anim = CASpringAnimation(keyPath: "bounds")
+        // 质量越大，弹簧拉伸和压缩的幅度越大
+        anim.mass = 10.0;
+        // 刚度系数越大，形变产生的力就越大，运动越快
+        anim.stiffness = 5000
+        // 阻尼系数，阻止弹簧伸缩的系数，阻尼系数越大，停止越快
+        anim.damping = 100.0
+        // 初始速率，动画视图的初始速度大小;速率为正数时，速度方向与运动方向一致，速率为负数时，速度方向与运动方向相反
+        anim.initialVelocity = 5.0
+        anim.fromValue = NSValue.init(cgRect: purpleLable.bounds)
+        anim.toValue = NSValue.init(cgRect: redLable.bounds)
+        anim.isRemovedOnCompletion = false
+        anim.fillMode = .forwards
+        anim.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        self.blueLable.layer.add(anim, forKey: "boundsAni")
+    }
+    
+}
+
+// MARK: - 事务
+// 事务的作用：保证一个或多个layer的一个或多个属性变化同时进行
+// 负责协调多个动画原子更新显示操作
+/*
+ 隐式 - 没有明显调用事务的方法，由系统自动生成事务。
+ 显式 - 明显调用事务的方法
+ */
+private extension ViewController {
+    
+    func testTransaction() {
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(2.0)
+        CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: .easeInEaseOut))
+        // ... 动画
+        CATransaction.commit()
+        // 注意：只有非root layer才有隐式动画
+    }
     
 }
