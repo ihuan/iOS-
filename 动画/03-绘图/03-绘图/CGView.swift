@@ -25,7 +25,115 @@ class CGView: UIView {
         
         //self.draw4()
         
-        self.draw5()
+        //self.draw5()
+        
+        //self.draw6()
+        
+        //self.draw7()
+        
+    }
+    
+    // MARK: - 绘制到位图  '水印'
+    func draw8() {
+        // 获得一个位图图形上下文
+        UIGraphicsBeginImageContext(CGSize(width: 300, height: 200))
+        let img = UIImage(named: "timg")
+        //注意绘图的位置是相对于画布顶点而言，不是屏幕
+        img?.draw(in: CGRect(x: 0, y: 0, width: 300, height: 200))
+    
+        // 添加水印
+        let context = UIGraphicsGetCurrentContext()
+        context?.move(to: CGPoint(x: 200, y: 178))
+        context?.addLine(to: CGPoint(x: 265, y: 178))
+        UIColor.red.setStroke()
+        context?.setLineWidth(2)
+        context?.drawPath(using: .stroke)
+        
+        let str = "HaiZeiWang"
+        (str as NSString).draw(in: CGRect(x: 200, y: 158, width: 100, height: 30),
+                               withAttributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
+                                                NSAttributedString.Key.foregroundColor: UIColor.red])
+        //返回绘制的新图形
+        let newImg = UIGraphicsGetImageFromCurrentImageContext()
+        // 关闭上下文
+        UIGraphicsEndImageContext()
+        
+        let imgView = UIImageView(image: newImg)
+        imgView.center = CGPoint(x: 160, y: 284)
+        addSubview(imgView)
+    }
+    
+    // MARK: - 上下文变换
+    func draw7() {
+        let context = UIGraphicsGetCurrentContext()
+        //保存初始状态
+        context?.saveGState()
+        // 像右平移
+        context?.translateBy(x: 50, y: 0)
+        // 缩放 0.8
+        context?.scaleBy(x: 0.5, y: 0.5)
+        // 旋转
+        context?.rotate(by: CGFloat(Double.pi)/4)
+        
+        let img = UIImage(named: "timg")
+        img?.draw(at: CGPoint(x: 0, y: 100));
+    }
+    
+    // MARK: - 绘制渐变
+    func draw6() {
+        let context = UIGraphicsGetCurrentContext()
+        // 使用RGB颜色空间
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        // components:颜色数组,注意由于指定了RGB颜色空间，那么四个数组元素表示一个颜色（red、green、blue、alpha），
+        // 如果有三个颜色则这个数组有4*3个元素
+        let component: [CGFloat] = [248.0/255.0, 86.0/255.0, 86.0/255.0, 1,
+                                    249.0/255.0, 127.0/255.0, 127.0/255.0, 1,
+                                    1.0, 1.0, 1.0, 1.0]
+        let locations: [CGFloat] = [0, 0.4, 1]
+        let gradient = CGGradient.init(colorSpace: colorSpace,
+                                       colorComponents: component,
+                                       locations: locations,
+                                       count: locations.count)
+        
+        // 线性渐变
+        context?.drawLinearGradient(gradient!,
+                                    start: CGPoint.zero,
+                                    end: CGPoint(x: self.frame.width, y: self.frame.height),
+                                    options: .drawsAfterEndLocation)
+        
+        // 径向渐变
+        /*
+        context?.drawRadialGradient(gradient!,
+                                    startCenter: CGPoint(x: 100, y: 100),
+                                    startRadius: 0,
+                                    endCenter: CGPoint(x: 105, y: 105),
+                                    endRadius: 80,
+                                    options: .drawsAfterEndLocation)
+         */
+        
+        // 填充渐变
+        //注意必须先裁切再调用渐变
+        UIRectClip(CGRect(x: 20, y: 250, width: 200, height: 200))
+        // 或者用 context?.clip(to: <#T##CGRect#>)
+        let componentClip: [CGFloat] = [148.0/255.0, 86.0/255.0, 86.0/255.0, 1,
+                                    149.0/255.0, 127.0/255.0, 127.0/255.0, 1,
+                                    1.0, 1.0, 1.0, 1.0]
+        let gradientClip = CGGradient.init(colorSpace: colorSpace,
+                                           colorComponents: componentClip,
+                                           locations: locations,
+                                           count: locations.count)
+        context?.drawLinearGradient(gradientClip!,
+                                    start: CGPoint(x: 50, y: 100),
+                                    end: CGPoint(x: 180, y: 100),
+                                    options: .drawsAfterEndLocation)
+        
+        // 叠加模式
+        /*
+         使用Quartz 2D绘图时后面绘制的图像会覆盖前面的，默认情况下如果前面的被覆盖后将看不到后面的内容，
+         但是有时候这个结果并不是我们想要的，因此在Quartz 2D中提供了填充模式供开发者配置调整
+         */
+        //相信大家对比代码和显示效果并不难发现每种叠加的效果。例子中只是使用UIKit的封装方法进行叠加模式设置，更一般的方法当然是使用CGContextSetBlendMode(CGContextRef context, CGBlendMode mode)方法进行设置。
+        //UIRectFillUsingBlendMode(rect2, CGBlendMode.Clear )
     }
     
     // MARK: - 绘制文字
@@ -74,7 +182,8 @@ class CGView: UIView {
         
         // 绘制贝塞尔曲线
         context?.move(to: CGPoint(x: 20, y: 310))
-        context?.addQuadCurve(to: CGPoint(x: 220, y: 310), control: CGPoint(x: 200, y: 400))
+        context?.addQuadCurve(to: CGPoint(x: 220, y: 310),
+                              control: CGPoint(x: 200, y: 400))
         UIColor.yellow.setFill()
         
         //context?.addQuadCurve(to: <#T##CGPoint#>, control: <#T##CGPoint#>)
