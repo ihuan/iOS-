@@ -16,7 +16,33 @@ class CGView: UIView {
 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        self.draw1()
+        
+        //self.draw1()
+        
+        self.draw2()
+        
+        //self.draw3(rect: rect)
+    }
+    
+    func draw3(rect: CGRect) {
+//        let context = UIGraphicsGetCurrentContext()
+//        self.draw(rect, for: UIViewPrintFormatter.init())
+    }
+    
+    // Core Graphics
+    // 内部对创建对象添加到上下文进行了封装
+    func draw2() {
+        let context = UIGraphicsGetCurrentContext()
+        context?.move(to: CGPoint(x: 10, y: 30))
+        context?.addLine(to: CGPoint(x: 10, y: 300))
+        context?.addLine(to: CGPoint(x: 280, y: 300))
+        // 封闭路径: 直接调用路径的封装方法
+        context?.closePath()
+        // 设置属性
+        UIColor.red.setStroke()
+        UIColor.yellow.setFill()
+        // 绘制路径
+        context?.drawPath(using: .fillStroke)
     }
     
     func draw1() {
@@ -30,7 +56,7 @@ class CGView: UIView {
         path.addLine(to: CGPoint(x: 150, y: 100))
         
         // 3、 添加路径到图形上下文
-        context!.addPath(path)
+        context?.addPath(path)
         
         // 4、 设置图形上下文状态属性
         context?.setStrokeColor(red: 1, green: 0, blue: 1, alpha: 1)  //设置笔触颜色
