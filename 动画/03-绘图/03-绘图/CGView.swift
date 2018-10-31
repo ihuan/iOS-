@@ -19,18 +19,21 @@ class CGView: UIView {
         
         //self.draw1()
         
-        self.draw2()
+        //self.draw2()
         
-        //self.draw3(rect: rect)
+        self.draw3()
     }
     
-    func draw3(rect: CGRect) {
-//        let context = UIGraphicsGetCurrentContext()
-//        self.draw(rect, for: UIViewPrintFormatter.init())
+    func draw3() {
+        let context = UIGraphicsGetCurrentContext()
+        // UIKit 对绘图方法的 ‘封装’
+        context?.addRect(CGRect(x: 20, y: 40, width: self.frame.width - 40, height: 50))
+        UIColor.blue.set()
+        context?.drawPath(using: .fillStroke)
     }
     
     // Core Graphics
-    // 内部对创建对象添加到上下文进行了封装
+    // 内部对创建对象添加到上下文进行了 ‘封装’
     func draw2() {
         let context = UIGraphicsGetCurrentContext()
         context?.move(to: CGPoint(x: 10, y: 30))
