@@ -30,7 +30,22 @@ class CGView: UIView {
     
     // MARK: - 绘制文字
     func draw5() {
+        let str = "使用CoreGraphics进行文字绘制使用, 效果是这样展现的！"
+        let rect = CGRect(x: 20, y: 20, width: 280, height: 200)
+        let font = UIFont.systemFont(ofSize: 16)
+        let style = NSMutableParagraphStyle()
+        style.alignment = NSTextAlignment.left
+        (str as NSString).draw(in: rect,
+                               withAttributes: [NSAttributedString.Key.font: font,
+                                                NSAttributedString.Key.foregroundColor: UIColor.red,
+                                                NSAttributedString.Key.paragraphStyle: style])
         
+        // 绘制图像
+        /*
+        let img = UIImage(named: "")
+        img?.draw(in: CGRect.zero)
+        img?.draw(at: CGPoint.zero)
+         */
     }
     
     // MARK: - 其他图形的绘制
