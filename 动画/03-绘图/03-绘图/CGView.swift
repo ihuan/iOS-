@@ -30,6 +30,14 @@ class CGView: UIView {
         context?.addRect(CGRect(x: 20, y: 40, width: self.frame.width - 40, height: 50))
         UIColor.blue.set()
         context?.drawPath(using: .fillStroke)
+        
+        let y_rect = CGRect(x: 20, y: 40 + 60, width: self.frame.width - 40, height: 50)
+        UIColor.yellow.set()
+        UIRectFill(y_rect)
+        
+        let r_rect = CGRect(x: 20, y: 40 + 120, width: self.frame.width - 40, height: 50)
+        UIColor.red.set()
+        UIRectFill(r_rect)
     }
     
     // Core Graphics
