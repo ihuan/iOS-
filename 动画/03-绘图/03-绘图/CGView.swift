@@ -43,23 +43,24 @@ class CGView: UIView {
     
         // 添加水印
         let context = UIGraphicsGetCurrentContext()
-        context?.move(to: CGPoint(x: 200, y: 178))
-        context?.addLine(to: CGPoint(x: 265, y: 178))
+        context?.move(to: CGPoint(x: 50, y: 130))
+        context?.addLine(to: CGPoint(x: 130, y: 80))
         UIColor.red.setStroke()
         context?.setLineWidth(2)
         context?.drawPath(using: .stroke)
         
         let str = "HaiZeiWang"
-        (str as NSString).draw(in: CGRect(x: 200, y: 158, width: 100, height: 30),
+        (str as NSString).draw(in: CGRect(x: 50, y: 100, width: 100, height: 30),
                                withAttributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
                                                 NSAttributedString.Key.foregroundColor: UIColor.red])
+        
         //返回绘制的新图形
         let newImg = UIGraphicsGetImageFromCurrentImageContext()
         // 关闭上下文
         UIGraphicsEndImageContext()
         
         let imgView = UIImageView(image: newImg)
-        imgView.center = CGPoint(x: 160, y: 284)
+        imgView.center = CGPoint(x: 50, y: 50)
         addSubview(imgView)
     }
     
