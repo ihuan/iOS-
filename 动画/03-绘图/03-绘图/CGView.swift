@@ -21,16 +21,61 @@ class CGView: UIView {
         
         //self.draw2()
         
-        self.draw3()
+        //self.draw3()
+        
+        //self.draw4()
+        
+        self.draw5()
     }
     
+    // MARK: - 绘制文字
+    func draw5() {
+        
+    }
+    
+    // MARK: - 其他图形的绘制
+    func draw4() {
+        // 椭圆
+        // 宽高相等就是‘圆’
+        let rect = CGRect(x: 20, y: 180, width: 100, height: 120)
+        let context = UIGraphicsGetCurrentContext()
+        context?.addEllipse(in: rect)
+        UIColor.gray.set()
+        context?.drawPath(using: .fill)
+        
+        // 弧形
+        /*
+         添加弧形对象
+         x:中心点x坐标
+         y:中心点y坐标
+         radius:半径
+         startAngle:起始弧度
+         endAngle:终止弧度
+         closewise:是否逆时针绘制，0则顺时针绘制
+         */
+        context?.addArc(center: CGPoint(x: 200, y: 250), radius: 50, startAngle: 0, endAngle: CGFloat(Double.pi), clockwise: false)
+        UIColor.green.set()
+        context?.drawPath(using: .fill)
+        
+        // 绘制贝塞尔曲线
+        context?.move(to: CGPoint(x: 20, y: 310))
+        context?.addQuadCurve(to: CGPoint(x: 220, y: 310), control: CGPoint(x: 200, y: 400))
+        UIColor.yellow.setFill()
+        
+        //context?.addQuadCurve(to: <#T##CGPoint#>, control: <#T##CGPoint#>)
+        context?.drawPath(using: .fillStroke)
+    }
+    
+    
+    // MARK: -  UIKit 对绘图方法的 ‘封装‘
     func draw3() {
         let context = UIGraphicsGetCurrentContext()
-        // UIKit 对绘图方法的 ‘封装’
+        // UIKit 对绘图方法的 ‘封装 1’
         context?.addRect(CGRect(x: 20, y: 40, width: self.frame.width - 40, height: 50))
         UIColor.blue.set()
         context?.drawPath(using: .fillStroke)
         
+        // UIKit 对绘图方法的 ‘封装 2’
         let y_rect = CGRect(x: 20, y: 40 + 60, width: self.frame.width - 40, height: 50)
         UIColor.yellow.set()
         UIRectFill(y_rect)
@@ -40,8 +85,10 @@ class CGView: UIView {
         UIRectFill(r_rect)
     }
     
+    
     // Core Graphics
     // 内部对创建对象添加到上下文进行了 ‘封装’
+    // MARK: -  Core Graphics 对绘图方法的 ‘封装‘
     func draw2() {
         let context = UIGraphicsGetCurrentContext()
         context?.move(to: CGPoint(x: 10, y: 30))
