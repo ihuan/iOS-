@@ -31,26 +31,28 @@ class CGView: UIView {
         
         //self.draw7()
         
+        self.draw8()
+        
     }
     
     // MARK: - 绘制到位图  '水印'
     func draw8() {
         // 获得一个位图图形上下文
-        UIGraphicsBeginImageContext(CGSize(width: 300, height: 200))
+        UIGraphicsBeginImageContext(CGSize(width: 200, height: 200))
         let img = UIImage(named: "timg")
         //注意绘图的位置是相对于画布顶点而言，不是屏幕
-        img?.draw(in: CGRect(x: 0, y: 0, width: 300, height: 200))
+        img?.draw(in: CGRect(x: 0, y: 0, width: 200, height: 200))
     
         // 添加水印
         let context = UIGraphicsGetCurrentContext()
-        context?.move(to: CGPoint(x: 50, y: 130))
-        context?.addLine(to: CGPoint(x: 130, y: 80))
+        context?.move(to: CGPoint(x: 100, y: 190))
+        context?.addLine(to: CGPoint(x: 190, y: 190))
         UIColor.red.setStroke()
         context?.setLineWidth(2)
         context?.drawPath(using: .stroke)
         
         let str = "HaiZeiWang"
-        (str as NSString).draw(in: CGRect(x: 50, y: 100, width: 100, height: 30),
+        (str as NSString).draw(in: CGRect(x: 100, y: 170, width: 100, height: 30),
                                withAttributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
                                                 NSAttributedString.Key.foregroundColor: UIColor.red])
         
@@ -60,7 +62,7 @@ class CGView: UIView {
         UIGraphicsEndImageContext()
         
         let imgView = UIImageView(image: newImg)
-        imgView.center = CGPoint(x: 50, y: 50)
+        imgView.center = self.center
         addSubview(imgView)
     }
     
