@@ -6,6 +6,9 @@
 //  Copyright © 2018 i-Sprint. All rights reserved.
 //
 
+// 参考： https://www.jianshu.com/p/2bf61807b6b3
+
+
 #import "ViewController.h"
 #import "TNLable1.h"
 
