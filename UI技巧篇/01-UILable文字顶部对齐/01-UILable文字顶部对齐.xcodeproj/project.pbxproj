@@ -13,6 +13,7 @@
 		7510B5AF21A7D5A200B1769D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7510B5AE21A7D5A200B1769D /* Assets.xcassets */; };
 		7510B5B221A7D5A200B1769D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7510B5B021A7D5A200B1769D /* LaunchScreen.storyboard */; };
 		7510B5B521A7D5A200B1769D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510B5B421A7D5A200B1769D /* main.m */; };
+		7510B5BD21A7DF3900B1769D /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = 7510B5BC21A7DF3900B1769D /* UILabel+VerticalAlign.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		7510B5B121A7D5A200B1769D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7510B5B321A7D5A200B1769D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7510B5B421A7D5A200B1769D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7510B5BB21A7DF3900B1769D /* UILabel+VerticalAlign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlign.h"; sourceTree = "<group>"; };
+		7510B5BC21A7DF3900B1769D /* UILabel+VerticalAlign.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlign.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				7510B5A621A7D59900B1769D /* AppDelegate.m */,
 				7510B5A821A7D59900B1769D /* ViewController.h */,
 				7510B5A921A7D59900B1769D /* ViewController.m */,
+				7510B5BB21A7DF3900B1769D /* UILabel+VerticalAlign.h */,
+				7510B5BC21A7DF3900B1769D /* UILabel+VerticalAlign.m */,
 				7510B5AB21A7D59900B1769D /* Main.storyboard */,
 				7510B5AE21A7D5A200B1769D /* Assets.xcassets */,
 				7510B5B021A7D5A200B1769D /* LaunchScreen.storyboard */,
@@ -141,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7510B5BD21A7DF3900B1769D /* UILabel+VerticalAlign.m in Sources */,
 				7510B5AA21A7D59900B1769D /* ViewController.m in Sources */,
 				7510B5B521A7D5A200B1769D /* main.m in Sources */,
 				7510B5A721A7D59900B1769D /* AppDelegate.m in Sources */,
