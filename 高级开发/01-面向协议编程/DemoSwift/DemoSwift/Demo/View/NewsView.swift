@@ -8,8 +8,6 @@
 
 import UIKit
 
-typealias NewsPresentable = TitlePresentable & ThumbnailPresentable
-
 class NewsView: UIView {
     
     private lazy var titleLabel: UILabel = {

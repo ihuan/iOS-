@@ -28,10 +28,13 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // 仿一个Model
         let news = News(title: "谢谢点击，我的笑容够灿烂吧!", thumbnailUrl: "2.png", titleColor: "black")
+        // 根据Model，仿一个 ViewModel
         let newsViewModel = NewsViewModel(news: news) {
             print("闭包")
         }
+        // 传入这个实现了 NewsPresentable 协议的 ViewModel
         newsView.updateWithPresenter(presenter: newsViewModel)
     }
     

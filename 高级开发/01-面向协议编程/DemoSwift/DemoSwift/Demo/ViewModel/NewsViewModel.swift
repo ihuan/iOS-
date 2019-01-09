@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias NewsPresentable = TitlePresentable & ThumbnailPresentable
+
 struct NewsViewModel: NewsPresentable {
  
     var title: String
