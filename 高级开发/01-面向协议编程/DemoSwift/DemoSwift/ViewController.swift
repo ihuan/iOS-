@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let news = News(title: "谢谢点击，我的笑容灿烂吧!", thumbnailUrl: "2.png", titleColor: "black")
+        let news = News(title: "谢谢点击，我的笑容够灿烂吧!", thumbnailUrl: "2.png", titleColor: "black")
         let newsViewModel = NewsViewModel(news: news) {
             print("闭包")
         }
