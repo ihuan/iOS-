@@ -242,6 +242,14 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - Dynamic Animation
+private extension ViewController {
+    func dynamicAnimation() {
+        // 3 Steps: Animator, behaviors, items
+        
+    }
+}
+
 private extension ViewController {
     func configUI() {
         image.center = view.center
