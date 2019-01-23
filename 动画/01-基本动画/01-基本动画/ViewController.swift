@@ -75,6 +75,27 @@ class ViewController: UIViewController {
                     .rotated(by: CGFloat(Double.pi/4))
                     .scaledBy(x: 0.5, y: 0.5)
             }
+        // 放大与缩小
+        case 1021:
+            // 也可以用这个方法
+            // 该方法与上面等效
+            //UIViewPropertyAnimator.runningPropertyAnimator(withDuration: <#T##TimeInterval#>, delay: <#T##TimeInterval#>, options: <#T##UIView.AnimationOptions#>, animations: <#T##() -> Void#>, completion: <#T##((UIViewAnimatingPosition) -> Void)?##((UIViewAnimatingPosition) -> Void)?##(UIViewAnimatingPosition) -> Void#>)
+            UIView.animate(withDuration: 2, delay: 0, options: UIView.AnimationOptions.transitionFlipFromLeft, animations: {
+                self.image.transform = CGAffineTransform.identity
+                    .scaledBy(x: 3, y: 3)
+                self.image.alpha = 1
+                self.image.isHidden = false
+            }) { (position) in
+                UIView.animate(withDuration: 2, delay: 0, options: UIView.AnimationOptions.transitionFlipFromLeft, animations: {
+                    self.image.transform = CGAffineTransform.identity
+                        .scaledBy(x: 0.3, y: 0.3)
+                    self.image.alpha = 0
+                }) { (position) in
+                    self.image.isHidden = true
+                    self.image.alpha = 1
+                    self.image.transform = .identity
+                }
+            }
         // Spring 弹簧
         case 103:
             UIView.animate(withDuration: 2,
