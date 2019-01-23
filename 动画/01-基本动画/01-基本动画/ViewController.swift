@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     private lazy var lable1: UILabel = {
         let lable = UILabel()
-        lable.frame = CGRect(x: 90, y: 20, width: 150, height: 150)
+        lable.frame = CGRect(x: 90, y: 120, width: 150, height: 150)
         lable.text = "Hello"
         lable.textColor = UIColor.white
         lable.backgroundColor = UIColor.black
@@ -126,27 +126,32 @@ class ViewController: UIViewController {
         case 105:
             // 1. View的Transitions
             
-            UIView.transition(with: self.image, duration: 2, options: [.transitionFlipFromLeft], animations: {
+            UIView.transition(
+                with: image,
+                duration: 2,
+                options: [.transitionFlipFromLeft],
+                animations: {
                 if self.image.image == #imageLiteral(resourceName: "logo") {
                     self.image.image = #imageLiteral(resourceName: "gold")
                 } else {
                     self.image.image = #imageLiteral(resourceName: "logo")
                 }
-            }, completion: nil)
+            })
             
             // 2. 自定义view的 Transitions
-            UIView.transition(with: self.myView1, duration: 2, options: .transitionFlipFromLeft, animations: {
-                self.myView1.setNeedsDisplay()
-            }, completion: nil)
-            
-            // 3. 过渡动画3
-            let lab2 = UILabel(frame: self.lable1.frame)
-            lab2.text = self.lable1.text == "Hello" ? "World" : "Hello"
-            lab2.textColor = UIColor.white
-            lab2.sizeToFit()
-            UIView.transition(from: self.lable1 , to: lab2 , duration: 0.8 , options: .transitionFlipFromLeft , completion: { _ in
-                self.lable1 = lab2
-            })
+//            UIView.transition(with: self.myView1, duration: 2, options: .transitionFlipFromLeft, animations: {
+//                self.myView1.setNeedsDisplay()
+//            }, completion: nil)
+//
+//            // 3. 过渡动画3
+//            let lab2 = UILabel(frame: self.lable1.frame)
+//            lab2.text = self.lable1.text == "Hello" ? "World" : "Hello"
+//            lab2.textColor = UIColor.purple
+//            lab2.sizeToFit()
+//            UIView.transition(from: self.lable1 , to: lab2 , duration: 0.8 , options: .transitionFlipFromLeft , completion: { _ in
+//                self.lable1 = lab2
+//            })
+            break
         default:
             print("Nothing to do!")
         }
