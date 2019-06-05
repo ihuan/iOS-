@@ -16,6 +16,12 @@
 		752AB3CA22A795DA00710351 /* BusinessA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3C922A795DA00710351 /* BusinessA.swift */; };
 		752AB3CC22A7965800710351 /* BusinessB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3CB22A7965800710351 /* BusinessB.swift */; };
 		752AB3CE22A7966400710351 /* BusinessC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3CD22A7966400710351 /* BusinessC.swift */; };
+		752AB3D122A7BA3900710351 /* BaseTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3D022A7BA3900710351 /* BaseTable.swift */; };
+		752AB3D322A7BA4600710351 /* BaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3D222A7BA4600710351 /* BaseData.swift */; };
+		752AB3D522A7BA6500710351 /* TableA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3D422A7BA6500710351 /* TableA1.swift */; };
+		752AB3D722A7BA7400710351 /* TableA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3D622A7BA7400710351 /* TableA2.swift */; };
+		752AB3D922A7BAD100710351 /* DataB1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3D822A7BAD100710351 /* DataB1.swift */; };
+		752AB3DB22A7BAD900710351 /* DataB2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3DA22A7BAD900710351 /* DataB2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		752AB3C922A795DA00710351 /* BusinessA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessA.swift; sourceTree = "<group>"; };
 		752AB3CB22A7965800710351 /* BusinessB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessB.swift; sourceTree = "<group>"; };
 		752AB3CD22A7966400710351 /* BusinessC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessC.swift; sourceTree = "<group>"; };
+		752AB3D022A7BA3900710351 /* BaseTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTable.swift; sourceTree = "<group>"; };
+		752AB3D222A7BA4600710351 /* BaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseData.swift; sourceTree = "<group>"; };
+		752AB3D422A7BA6500710351 /* TableA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableA1.swift; sourceTree = "<group>"; };
+		752AB3D622A7BA7400710351 /* TableA2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableA2.swift; sourceTree = "<group>"; };
+		752AB3D822A7BAD100710351 /* DataB1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataB1.swift; sourceTree = "<group>"; };
+		752AB3DA22A7BAD900710351 /* DataB2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataB2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 		752AB3B322A78FB000710351 /* DesignPattern */ = {
 			isa = PBXGroup;
 			children = (
+				752AB3CF22A7B89200710351 /* Bridge */,
 				752AB3C622A78FE000710351 /* Responder */,
 				752AB3B422A78FB000710351 /* AppDelegate.swift */,
 				752AB3B622A78FB000710351 /* ViewController.swift */,
@@ -82,6 +95,19 @@
 				752AB3CD22A7966400710351 /* BusinessC.swift */,
 			);
 			path = Responder;
+			sourceTree = "<group>";
+		};
+		752AB3CF22A7B89200710351 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				752AB3D022A7BA3900710351 /* BaseTable.swift */,
+				752AB3D422A7BA6500710351 /* TableA1.swift */,
+				752AB3D622A7BA7400710351 /* TableA2.swift */,
+				752AB3D222A7BA4600710351 /* BaseData.swift */,
+				752AB3D822A7BAD100710351 /* DataB1.swift */,
+				752AB3DA22A7BAD900710351 /* DataB2.swift */,
+			);
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,12 +181,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752AB3D922A7BAD100710351 /* DataB1.swift in Sources */,
 				752AB3B722A78FB000710351 /* ViewController.swift in Sources */,
+				752AB3D122A7BA3900710351 /* BaseTable.swift in Sources */,
+				752AB3D522A7BA6500710351 /* TableA1.swift in Sources */,
 				752AB3CE22A7966400710351 /* BusinessC.swift in Sources */,
 				752AB3C822A7902D00710351 /* BusinessBase.swift in Sources */,
 				752AB3CC22A7965800710351 /* BusinessB.swift in Sources */,
 				752AB3B522A78FB000710351 /* AppDelegate.swift in Sources */,
+				752AB3D322A7BA4600710351 /* BaseData.swift in Sources */,
+				752AB3DB22A7BAD900710351 /* DataB2.swift in Sources */,
 				752AB3CA22A795DA00710351 /* BusinessA.swift in Sources */,
+				752AB3D722A7BA7400710351 /* TableA2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
