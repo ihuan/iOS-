@@ -22,6 +22,8 @@
 		752AB3D722A7BA7400710351 /* TableA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3D622A7BA7400710351 /* TableA2.swift */; };
 		752AB3D922A7BAD100710351 /* DataB1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3D822A7BAD100710351 /* DataB1.swift */; };
 		752AB3DB22A7BAD900710351 /* DataB2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3DA22A7BAD900710351 /* DataB2.swift */; };
+		752AB3DE22A8F6CB00710351 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3DD22A8F6CB00710351 /* Target.swift */; };
+		752AB3E022A8F6FA00710351 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AB3DF22A8F6FA00710351 /* Adapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		752AB3D622A7BA7400710351 /* TableA2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableA2.swift; sourceTree = "<group>"; };
 		752AB3D822A7BAD100710351 /* DataB1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataB1.swift; sourceTree = "<group>"; };
 		752AB3DA22A7BAD900710351 /* DataB2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataB2.swift; sourceTree = "<group>"; };
+		752AB3DD22A8F6CB00710351 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		752AB3DF22A8F6FA00710351 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		752AB3B322A78FB000710351 /* DesignPattern */ = {
 			isa = PBXGroup;
 			children = (
+				752AB3DC22A8F69000710351 /* Adapter */,
 				752AB3CF22A7B89200710351 /* Bridge */,
 				752AB3C622A78FE000710351 /* Responder */,
 				752AB3B422A78FB000710351 /* AppDelegate.swift */,
@@ -108,6 +113,15 @@
 				752AB3DA22A7BAD900710351 /* DataB2.swift */,
 			);
 			path = Bridge;
+			sourceTree = "<group>";
+		};
+		752AB3DC22A8F69000710351 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				752AB3DD22A8F6CB00710351 /* Target.swift */,
+				752AB3DF22A8F6FA00710351 /* Adapter.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,10 +203,12 @@
 				752AB3C822A7902D00710351 /* BusinessBase.swift in Sources */,
 				752AB3CC22A7965800710351 /* BusinessB.swift in Sources */,
 				752AB3B522A78FB000710351 /* AppDelegate.swift in Sources */,
+				752AB3DE22A8F6CB00710351 /* Target.swift in Sources */,
 				752AB3D322A7BA4600710351 /* BaseData.swift in Sources */,
 				752AB3DB22A7BAD900710351 /* DataB2.swift in Sources */,
 				752AB3CA22A795DA00710351 /* BusinessA.swift in Sources */,
 				752AB3D722A7BA7400710351 /* TableA2.swift in Sources */,
+				752AB3E022A8F6FA00710351 /* Adapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
