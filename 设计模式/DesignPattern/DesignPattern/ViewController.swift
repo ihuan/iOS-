@@ -17,7 +17,10 @@ class ViewController: UIViewController {
         //testResponder()
         
         // 桥接
-        testBridge()
+        //testBridge()
+        
+        // 命令
+        testCommand()
     }
 
 }
@@ -49,5 +52,17 @@ extension ViewController {
         tableA1.baseData = DataB2()
         tableA1.handle()
         
+    }
+    
+    func testCommand() {
+        let command01 = Command()
+        let command02 = Command()
+        CommandManager.executeCommand(cmd: command01) { (cmd) in
+            print("执行命令01")
+        }
+        CommandManager.cancelCommand(cmd: command01)
+        CommandManager.executeCommand(cmd: command02) { (cmd) in
+            print("执行命令02")
+        }
     }
 }
