@@ -17,8 +17,11 @@ class CommandManager: NSObject {
     /// 执行命令
     class func executeCommand(cmd: Command, completion: CommandCompletionCallBack?) {
         if isExecutingCommand(cmd: cmd) == false {
+            // 加到数组
             shareInstance.arrayCommands.append(cmd)
+            // 命令执行完成后，回调
             cmd.completion = completion
+            // 执行命令
             cmd.execute()
         }
     }
