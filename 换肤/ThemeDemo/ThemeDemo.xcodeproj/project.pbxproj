@@ -13,6 +13,9 @@
 		021B5B1622B376CC00158809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021B5B1422B376CC00158809 /* Main.storyboard */; };
 		021B5B1822B376D500158809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 021B5B1722B376D500158809 /* Assets.xcassets */; };
 		021B5B1B22B376D500158809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021B5B1922B376D500158809 /* LaunchScreen.storyboard */; };
+		021B5B2322B381FA00158809 /* themeColorTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 021B5B2222B381F900158809 /* themeColorTable.plist */; };
+		021B5B2522B384EF00158809 /* UIButton+TNTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B5B2422B384EF00158809 /* UIButton+TNTheme.swift */; };
+		021B5B2722B38E3100158809 /* TNThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B5B2622B38E3100158809 /* TNThemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		021B5B1722B376D500158809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		021B5B1A22B376D500158809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		021B5B1C22B376D500158809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		021B5B2222B381F900158809 /* themeColorTable.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = themeColorTable.plist; sourceTree = "<group>"; };
+		021B5B2422B384EF00158809 /* UIButton+TNTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TNTheme.swift"; sourceTree = "<group>"; };
+		021B5B2622B38E3100158809 /* TNThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNThemeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +65,13 @@
 				021B5B0E22B376CC00158809 /* AppDelegate.swift */,
 				021B5B1022B376CC00158809 /* SceneDelegate.swift */,
 				021B5B1222B376CC00158809 /* ViewController.swift */,
+				021B5B2622B38E3100158809 /* TNThemeManager.swift */,
+				021B5B2422B384EF00158809 /* UIButton+TNTheme.swift */,
 				021B5B1422B376CC00158809 /* Main.storyboard */,
 				021B5B1722B376D500158809 /* Assets.xcassets */,
 				021B5B1922B376D500158809 /* LaunchScreen.storyboard */,
 				021B5B1C22B376D500158809 /* Info.plist */,
+				021B5B2222B381F900158809 /* themeColorTable.plist */,
 			);
 			path = ThemeDemo;
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				021B5B1B22B376D500158809 /* LaunchScreen.storyboard in Resources */,
+				021B5B2322B381FA00158809 /* themeColorTable.plist in Resources */,
 				021B5B1822B376D500158809 /* Assets.xcassets in Resources */,
 				021B5B1622B376CC00158809 /* Main.storyboard in Resources */,
 			);
@@ -141,6 +151,8 @@
 				021B5B1322B376CC00158809 /* ViewController.swift in Sources */,
 				021B5B0F22B376CC00158809 /* AppDelegate.swift in Sources */,
 				021B5B1122B376CC00158809 /* SceneDelegate.swift in Sources */,
+				021B5B2522B384EF00158809 /* UIButton+TNTheme.swift in Sources */,
+				021B5B2722B38E3100158809 /* TNThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

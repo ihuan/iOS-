@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,11 +19,19 @@ class ViewController: UIViewController {
         themeBtn.setTitleColor(UIColor.lightGray, for: .highlighted)
         themeBtn.setTitleColor(UIColor.white, for: [])
         themeBtn.setTitle("点击", for: [])
-        themeBtn.backgroundColor = UIColor.purple
+        themeBtn.addTarget(self, action: #selector(changeThemeAction), for: .touchUpInside)
+        themeBtn.tnBackGroundColor = TNThemeManager.shared.getCurrentColor(theme: "BG")
         view.addSubview(themeBtn)
         
     }
 
-
+    @objc func changeThemeAction() {
+        print("改变主题")
+        TNThemeManager.shared.currentTheme = "RED"
+    }
+    
+    deinit {
+        print("what")
+    }
 }
 
