@@ -11,8 +11,6 @@ import UIKit
 
 private var key_bgColor: Void?
 
-var selectorDict: [String: String]?
-
 extension UIButton {
     
     var tnBackGroundColor: UIColor? {

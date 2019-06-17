@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02199BAC22B73F5D003A43C8 /* NSObject+TNTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02199BAB22B73F5D003A43C8 /* NSObject+TNTheme.swift */; };
 		021B5B0F22B376CC00158809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B5B0E22B376CC00158809 /* AppDelegate.swift */; };
 		021B5B1122B376CC00158809 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B5B1022B376CC00158809 /* SceneDelegate.swift */; };
 		021B5B1322B376CC00158809 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B5B1222B376CC00158809 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02199BAB22B73F5D003A43C8 /* NSObject+TNTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+TNTheme.swift"; sourceTree = "<group>"; };
 		021B5B0B22B376CC00158809 /* ThemeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThemeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		021B5B0E22B376CC00158809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		021B5B1022B376CC00158809 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				021B5B1222B376CC00158809 /* ViewController.swift */,
 				021B5B2622B38E3100158809 /* TNThemeManager.swift */,
 				021B5B2422B384EF00158809 /* UIButton+TNTheme.swift */,
+				02199BAB22B73F5D003A43C8 /* NSObject+TNTheme.swift */,
 				021B5B1422B376CC00158809 /* Main.storyboard */,
 				021B5B1722B376D500158809 /* Assets.xcassets */,
 				021B5B1922B376D500158809 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				021B5B1122B376CC00158809 /* SceneDelegate.swift in Sources */,
 				021B5B2522B384EF00158809 /* UIButton+TNTheme.swift in Sources */,
 				021B5B2722B38E3100158809 /* TNThemeManager.swift in Sources */,
+				02199BAC22B73F5D003A43C8 /* NSObject+TNTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

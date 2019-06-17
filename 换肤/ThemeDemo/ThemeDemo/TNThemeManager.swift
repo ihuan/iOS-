@@ -10,7 +10,7 @@ import UIKit
 
 class TNThemeManager: NSObject {
 
-    var themeDict: [String: [String: UIColor]]?
+    var themeDict: [String: [String: UIColor]?]?
     
     static var shared: TNThemeManager {
         let themeManager = TNThemeManager()
@@ -21,7 +21,7 @@ class TNThemeManager: NSObject {
         return themeManager
     }
     
-    var currentTheme: NSString? {
+    var currentTheme: String? {
         didSet {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "themeChanging"), object: nil)
         }
@@ -34,7 +34,7 @@ class TNThemeManager: NSObject {
     // 获取当前主题颜色
     func getCurrentColor(theme: String) -> UIColor? {
         let dict = themeDict?[theme]
-        let color = dict?["currentTheme"]
+        let color = dict??[currentTheme!]
         return color
     }
  
