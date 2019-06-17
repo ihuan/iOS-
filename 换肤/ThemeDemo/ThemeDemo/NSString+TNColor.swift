@@ -24,7 +24,7 @@ extension String {
             return nil
         }
         
-        let color = UIColor.init(red: 23/255, green: 34/255, blue: 44/255, alpha: 1)
+        let color = UIColor(red: 34/255, green: 232/255, blue: 23/255, alpha: 1.0)
         return color
     }
     
