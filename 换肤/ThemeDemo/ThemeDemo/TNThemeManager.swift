@@ -27,8 +27,19 @@ class TNThemeManager: NSObject {
         }
     }
     
-    func loadThemeFile(fileName: NSString?) {
-        
+    func loadThemeFile(fileName: String) {
+        let path = Bundle.main.path(forResource: fileName, ofType: (fileName as NSString).pathExtension)
+        guard let pathG = path else {
+            return;
+        }
+        let dict = NSDictionary(contentsOfFile: pathG) as! [String: [String: Any]]
+        for d in dict {
+            var subDic = d.value
+            for sd in subDic {
+                let colorString = sd.value
+                subDic[sd.key] = colorString
+            }
+        }
     }
     
     // 获取当前主题颜色
