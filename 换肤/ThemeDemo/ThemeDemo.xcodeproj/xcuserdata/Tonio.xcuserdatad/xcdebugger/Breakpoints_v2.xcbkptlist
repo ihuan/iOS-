@@ -68,5 +68,53 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F713A14-A8DD-46CD-96C6-FB2EA7A620A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThemeDemo/TNThemeManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "getCurrentColor(theme:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0F713A14-A8DD-46CD-96C6-FB2EA7A620A7 - f0958378907d158b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ThemeDemo.TNThemeManager.getCurrentColor(theme: Swift.String) -&gt; Swift.Optional&lt;__C.UIColor&gt;"
+                  moduleName = "ThemeDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tonio/Documents/Sourcetree/iOS-StudyDemo/%E6%8D%A2%E8%82%A4/ThemeDemo/ThemeDemo/TNThemeManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "481">
+               </Location>
+               <Location
+                  uuid = "0F713A14-A8DD-46CD-96C6-FB2EA7A620A7 - f0958378907d158b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ThemeDemo.TNThemeManager.getCurrentColor(theme: Swift.String) -&gt; Swift.Optional&lt;__C.UIColor&gt;"
+                  moduleName = "ThemeDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tonio/Documents/Sourcetree/iOS-StudyDemo/%E6%8D%A2%E8%82%A4/ThemeDemo/ThemeDemo/TNThemeManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1219">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

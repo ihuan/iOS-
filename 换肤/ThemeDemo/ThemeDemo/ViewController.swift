@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 
     @objc func changeThemeAction() {
         print("改变主题")
-        TNThemeManager.shared.currentTheme = "RED"
+        TNThemeManager.shared.currentTheme = "NIGHT"
     }
     
     deinit {
