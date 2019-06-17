@@ -23,15 +23,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2FA63448-F596-48A9-8417-7659AC7CCE1D"
+            uuid = "38780A50-A7BB-4212-AF7F-15954EC9134C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ThemeDemo/NSObject+TNTheme.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "themeChanging()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8AFA32F1-40EC-422F-B445-AD70342D0E6B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThemeDemo/NSObject+TNTheme.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "selectorDict"
             landmarkType = "24">
          </BreakpointContent>
@@ -39,49 +55,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8E325297-BA7E-4E4E-99A7-67702A91F3B0"
+            uuid = "4F86197A-8492-4046-983E-B193E5A92DF5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ThemeDemo/TNThemeManager.swift"
+            filePath = "ThemeDemo/UIButton+TNTheme.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "getCurrentColor(theme:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8E325297-BA7E-4E4E-99A7-67702A91F3B0 - f0958378907d158b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ThemeDemo.TNThemeManager.getCurrentColor(theme: Swift.String) -&gt; Swift.Optional&lt;__C.UIColor&gt;"
-                  moduleName = "ThemeDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Tonio/Documents/Sourcetree/iOS-StudyDemo/%E6%8D%A2%E8%82%A4/ThemeDemo/ThemeDemo/TNThemeManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "481">
-               </Location>
-               <Location
-                  uuid = "8E325297-BA7E-4E4E-99A7-67702A91F3B0 - f0958378907d158b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ThemeDemo.TNThemeManager.getCurrentColor(theme: Swift.String) -&gt; Swift.Optional&lt;__C.UIColor&gt;"
-                  moduleName = "ThemeDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Tonio/Documents/Sourcetree/iOS-StudyDemo/%E6%8D%A2%E8%82%A4/ThemeDemo/ThemeDemo/TNThemeManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "1219">
-               </Location>
-            </Locations>
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "tnBackGroundColor"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
