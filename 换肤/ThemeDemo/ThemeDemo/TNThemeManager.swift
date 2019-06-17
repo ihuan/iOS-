@@ -15,7 +15,7 @@ class TNThemeManager: NSObject {
     static var shared: TNThemeManager {
         let themeManager = TNThemeManager()
         // 加载主题文件
-        
+        loadThemeFile(fileName: "themeColorTable")
         // 设置当前主题
         themeManager.currentTheme = "NORMAL"
         return themeManager
@@ -27,8 +27,8 @@ class TNThemeManager: NSObject {
         }
     }
     
-    func loadThemeFile(fileName: String) {
-        let path = Bundle.main.path(forResource: fileName, ofType: (fileName as NSString).pathExtension)
+    static func loadThemeFile(fileName: String) {
+        let path = Bundle.main.path(forResource: fileName, ofType: "plist")
         guard let pathG = path else {
             return;
         }
@@ -36,8 +36,9 @@ class TNThemeManager: NSObject {
         for d in dict {
             var subDic = d.value
             for sd in subDic {
-                let colorString = sd.value
-                subDic[sd.key] = colorString
+                let colorString = sd.value as! String
+                // 字符转颜色
+                subDic[sd.key] = colorString.stringToUIColor
             }
         }
     }

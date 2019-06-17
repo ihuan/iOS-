@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         themeBtn.setTitle("点击", for: [])
         themeBtn.addTarget(self, action: #selector(changeThemeAction), for: .touchUpInside)
         themeBtn.tnBackGroundColor = TNThemeManager.shared.getCurrentColor(theme: "BG")
+//        themeBtn.backgroundColor = UIColor(red: 34/255, green: 232/255, blue: 23/255, alpha: 1.0)
         view.addSubview(themeBtn)
         
     }
