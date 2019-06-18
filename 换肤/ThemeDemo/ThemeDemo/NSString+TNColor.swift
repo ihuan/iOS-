@@ -23,9 +23,9 @@ extension String {
         guard scanner.scanHexInt64(&colorInt) else {
             return nil
         }
-        let color = UIColor(red: CGFloat((colorInt >> 16)/255),
-                            green: CGFloat(((colorInt&0xFF00)>>8)/255),
-                            blue: CGFloat((colorInt&0xFF)/255),
+        let color = UIColor(red: CGFloat(colorInt >> 16)/255,
+                            green: CGFloat((colorInt&0xFF00)>>8)/255,
+                            blue: CGFloat(colorInt&0xFF)/255,
                             alpha: 1.0)
         return color
     }

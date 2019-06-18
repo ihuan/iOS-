@@ -13,14 +13,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.darkGray
+        
         let themeBtn = UIButton.init(type: .custom)
         themeBtn.frame = CGRect(x: 100, y: 100, width: 200, height: 200)
         themeBtn.center = view.center
         themeBtn.setTitleColor(UIColor.lightGray, for: .highlighted)
-        themeBtn.setTitleColor(UIColor.white, for: [])
+        themeBtn.setTitleColor(UIColor.black, for: [])
         themeBtn.setTitle("点击", for: [])
         themeBtn.addTarget(self, action: #selector(changeThemeAction), for: .touchUpInside)
         themeBtn.tnBackGroundColor = TNThemeManager.shared.getCurrentColor(theme: "BG")
+        themeBtn.layer.cornerRadius = 5.0
 //        themeBtn.backgroundColor = UIColor(red: 34/255, green: 232/255, blue: 23/255, alpha: 1.0)
         view.addSubview(themeBtn)
         
@@ -28,7 +31,11 @@ class ViewController: UIViewController {
 
     @objc func changeThemeAction() {
         print("改变主题")
-        TNThemeManager.shared.currentTheme = "NIGHT"
+        if TNThemeManager.shared.currentTheme == "RED" {
+            TNThemeManager.shared.currentTheme = "NIGHT"
+        } else {
+            TNThemeManager.shared.currentTheme = "RED"
+        }
     }
     
     deinit {
