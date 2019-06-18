@@ -4,6 +4,12 @@
 <dict>
 	<key>BG</key>
 	<dict>
+		<key>GREEN</key>
+		<string>#32CD32</string>
+		<key>CYAN</key>
+		<string>#00FFFF	</string>
+		<key>PURPLE</key>
+		<string>#800080</string>
 		<key>NORMAL</key>
 		<string>#F0F8FF</string>
 		<key>NIGHT</key>

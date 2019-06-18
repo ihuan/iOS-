@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.darkGray
         
-        var bgView: UIView = {
+        let bgView: UIView = {
             let v = UIView()
             v.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - 64*2)
             v.backgroundColor = v.superview?.backgroundColor
@@ -23,14 +23,6 @@ class ViewController: UIViewController {
             return v
         }()
         view.addSubview(bgView)
-        
-        var bgViewt: UIView {
-            let v = UIView()
-            v.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - 64*2)
-            v.backgroundColor = v.superview?.backgroundColor
-            v.center = view.center
-            return v
-        }
         
         let margin = 24
         let btnRect = 100
@@ -49,6 +41,12 @@ class ViewController: UIViewController {
             bgView.addSubview(themeBtn)
         }
         
+        let timer = Timer.init(timeInterval: 0.2, repeats:true) { (kTimer) in
+            self.changeThemeAction()
+        }
+        RunLoop.current.add(timer, forMode: RunLoop.Mode.default)
+        // TODO : 启动定时器
+        timer.fire()
       
     }
 
@@ -57,9 +55,16 @@ class ViewController: UIViewController {
             TNThemeManager.shared.currentTheme = "NIGHT"
         } else if TNThemeManager.shared.currentTheme == "NIGHT" {
             TNThemeManager.shared.currentTheme = "RED"
+        } else if TNThemeManager.shared.currentTheme == "RED" {
+            TNThemeManager.shared.currentTheme = "GREEN"
+        } else if TNThemeManager.shared.currentTheme == "GREEN" {
+            TNThemeManager.shared.currentTheme = "CYAN"
+        } else if TNThemeManager.shared.currentTheme == "CYAN" {
+            TNThemeManager.shared.currentTheme = "PURPLE"
         } else {
             TNThemeManager.shared.currentTheme = "NORMAL"
         }
+        
     }
 }
 

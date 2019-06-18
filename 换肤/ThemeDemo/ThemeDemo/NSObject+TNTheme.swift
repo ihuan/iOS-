@@ -19,7 +19,7 @@ extension NSObject {
             if dic == nil {
                 NotificationCenter.default.addObserver(self, selector: #selector(themeChanging), name: NSNotification.Name(rawValue: "themeChanging"), object: nil)
                 dic = [:]
-                objc_setAssociatedObject(self, &key_selectorDict, dic, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+//                objc_setAssociatedObject(self, &key_selectorDict, dic, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             }
             return dic
         }
