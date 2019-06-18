@@ -15,14 +15,22 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.darkGray
         
-        let bgView: UIView = {
+        var bgView: UIView = {
             let v = UIView()
             v.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - 64*2)
             v.backgroundColor = v.superview?.backgroundColor
             v.center = view.center
             return v
-        } ()
+        }()
         view.addSubview(bgView)
+        
+        var bgViewt: UIView {
+            let v = UIView()
+            v.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - 64*2)
+            v.backgroundColor = v.superview?.backgroundColor
+            v.center = view.center
+            return v
+        }
         
         let margin = 24
         let btnRect = 100
@@ -45,12 +53,12 @@ class ViewController: UIViewController {
     }
 
     @objc func changeThemeAction() {
-        if TNThemeManager.shared.currentTheme == "RED" {
+        if TNThemeManager.shared.currentTheme == "NORMAL" {
             TNThemeManager.shared.currentTheme = "NIGHT"
         } else if TNThemeManager.shared.currentTheme == "NIGHT" {
-            TNThemeManager.shared.currentTheme = "NORMAL"
-        } else {
             TNThemeManager.shared.currentTheme = "RED"
+        } else {
+            TNThemeManager.shared.currentTheme = "NORMAL"
         }
     }
 }

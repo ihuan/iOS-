@@ -19,7 +19,7 @@ class TNThemeManager: NSObject {
         // 加载主题文件
         loadThemeFile(fileName: "themeColorTable")
         // 设置当前主题
-        currentTheme = "RED"
+        currentTheme = "NORMAL"
     }
     
     var currentTheme: String? {
