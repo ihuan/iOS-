@@ -25,4 +25,16 @@ extension UIButton {
         }
     }
     
+    var btnBgColorBlock: tnBlock? {
+        get {
+            return objc_getAssociatedObject(self, &key_bgColor) as? tnBlock
+        }
+        set {
+            objc_setAssociatedObject(self, &key_bgColor, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+            let c = newValue?(TNThemeManager.shared.currentTheme!)
+            backgroundColor = c
+            let aSlector = #selector(setter: backgroundColor)
+            self.blockDict?[NSStringFromSelector(aSlector)] = newValue
+        }
+    }
 }

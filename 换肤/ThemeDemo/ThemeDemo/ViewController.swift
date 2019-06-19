@@ -36,7 +36,8 @@ class ViewController: UIViewController {
             themeBtn.setTitleColor(UIColor.black, for: [])
             themeBtn.setTitle("更改主题", for: [])
             themeBtn.addTarget(self, action: #selector(changeThemeAction), for: .touchUpInside)
-            themeBtn.tnBackGroundColor = TNThemeManager.shared.getCurrentColor(theme: "BG")
+            //themeBtn.tnBackGroundColor = TNThemeManager.shared.getCurrentColor(theme: "BG")
+            themeBtn.btnBgColorBlock = TNThemeManager.shared.getThemeColor(theme: "BG")
             themeBtn.layer.cornerRadius = 5.0
             bgView.addSubview(themeBtn)
         }
@@ -45,7 +46,6 @@ class ViewController: UIViewController {
             self.changeThemeAction()
         }
         RunLoop.current.add(timer, forMode: RunLoop.Mode.default)
-        // TODO : 启动定时器
         timer.fire()
       
     }
@@ -64,7 +64,6 @@ class ViewController: UIViewController {
         } else {
             TNThemeManager.shared.currentTheme = "NORMAL"
         }
-        
     }
 }
 

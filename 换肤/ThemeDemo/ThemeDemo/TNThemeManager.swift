@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias tnBlock = (_ theme: String) -> (UIColor)
+
 class TNThemeManager: NSObject {
 
     var themeDict: [String: [String: Any]?]?
@@ -52,5 +54,13 @@ class TNThemeManager: NSObject {
         let color = dict??[currentTheme!] as! UIColor
         return color
     }
- 
+    
+    // Block 方式
+    func getThemeColor(theme: String) -> tnBlock {
+        let dic = themeDict?[theme]
+        let tnBlock: tnBlock = { (currentTheme: String?) in
+            return dic??[currentTheme!] as! UIColor
+        }
+        return tnBlock
+    }
 }

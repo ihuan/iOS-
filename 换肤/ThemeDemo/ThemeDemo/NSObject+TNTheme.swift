@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 private var key_selectorDict: Void?
+private var key_blockDic: Void?
 
 extension NSObject {
     
@@ -28,10 +29,28 @@ extension NSObject {
         }
     }
     
+    var blockDict: [String: tnBlock]? {
+        get {
+            var dic = objc_getAssociatedObject(self, &key_blockDic) as? [String: tnBlock]
+            if dic == nil {
+                NotificationCenter.default.addObserver(self, selector: #selector(themeChanging), name: NSNotification.Name(rawValue: "themeChanging"), object: nil)
+                dic = [:]
+            }
+            return dic
+        }
+        set {
+            objc_setAssociatedObject(self, &key_blockDic, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
     @objc func themeChanging() {
-        for (key, obj) in selectorDict ?? [:] {
-            let color = TNThemeManager.shared.getCurrentColor(theme: key)
-            self.perform(NSSelectorFromString(obj), with: color)
+//        for (key, obj) in selectorDict ?? [:] {
+//            let color = TNThemeManager.shared.getCurrentColor(theme: key)
+//            self.perform(NSSelectorFromString(obj), with: color)
+//        }
+        for (key, obj) in blockDict ?? [:] {
+            let color = obj(TNThemeManager.shared.currentTheme ?? "NORMAL")
+            self.perform(NSSelectorFromString(key), with: color)
         }
     }
 }
