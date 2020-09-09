@@ -16,14 +16,14 @@ class CGView: UIView {
 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
+        drawTest()
+//        self.draw1()
         
-        //self.draw1()
+//        self.draw2()
         
-        //self.draw2()
+//        self.draw3()
         
-        //self.draw3()
-        
-        //self.draw4()
+//        self.draw4()
         
         //self.draw5()
         
@@ -31,7 +31,7 @@ class CGView: UIView {
         
         //self.draw7()
         
-        self.draw8()
+//        self.draw8()
         
     }
     
@@ -189,6 +189,14 @@ class CGView: UIView {
                               control: CGPoint(x: 200, y: 400))
         UIColor.yellow.setFill()
         
+        //test
+        context?.move(to: CGPoint(x: 20, y: 120))
+        context?.move(to: CGPoint(x: 0, y: 120))
+        context?.move(to: CGPoint(x: 0, y: 140))
+        context?.addQuadCurve(to: CGPoint(x: 20, y: 120),
+                              control: CGPoint(x: 200, y: 400))
+        UIColor.blue.setFill()
+        
         //context?.addQuadCurve(to: <#T##CGPoint#>, control: <#T##CGPoint#>)
         context?.drawPath(using: .fillStroke)
     }
@@ -227,6 +235,31 @@ class CGView: UIView {
         UIColor.red.setStroke()
         UIColor.yellow.setFill()
         // 绘制路径
+        context?.drawPath(using: .fillStroke)
+    }
+    
+    func drawTest() {
+         let context = UIGraphicsGetCurrentContext()
+//        let path = CGMutablePath()
+//        path.move(to: CGPoint(x: 190, y: 190))
+//        path.addArc(center: CGPoint(x: 190, y: 190), radius: 90, startAngle:1.5*CGFloat(Double.pi), endAngle: CGFloat(Double.pi), clockwise: true)
+//        context?.addPath(path)
+        
+//        addQuadCurve
+        let path1 = CGMutablePath()
+        let with: CGFloat = 85
+        let xInset: CGFloat = 90
+        path1.move(to: CGPoint(x: xInset+with, y: 100))
+        path1.addLine(to: CGPoint(x: xInset , y: 100))
+        path1.addLine(to: CGPoint(x: xInset, y: 100+with))
+        path1.addQuadCurve(to: CGPoint(x: xInset+with, y: 100),
+                           control: CGPoint(x: xInset , y: 100))
+        context?.addPath(path1)
+        
+        
+//        context?.setStrokeColor(red: 1, green: 0, blue: 1, alpha: 1)  //设置笔触颜色
+        context?.setFillColor(red: 1, green: 1, blue: 0, alpha: 1) //设置填充色
+        context?.setLineWidth(0)  //设置线条宽度
         context?.drawPath(using: .fillStroke)
     }
     
